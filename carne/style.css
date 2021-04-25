@@ -17,6 +17,29 @@ středně široké obrazovky:
 }
 */
 
+:root {
+    --paticka-color: silver;
+    --font-color: white;
+    --border-color: white;
+    --padding-mobil: 0.5rem;
+    --padding-tablet: 1.25rem;
+}
+
+.pokrm {
+    --font-size-mobil: 1.2rem;
+    --font-size-tablet: 1.5rem;
+    --font-size-pc: 1.75rem;
+}
+
+.pokrm-hlavni {
+    --font-size-hlavni-mobil: 1.75rem;
+    --font-size-hlavni-tablet: 2rem;
+    --font-size-hlavni-pc: 3rem;
+}
+
+html {
+    font-size: 16px;
+}
 
 body {
     margin: 0;
@@ -26,15 +49,186 @@ body {
 .paticka {
     text-align: center;
     font-size: 14px;
-    color: silver;
+    color: var(--paticka-color);
+    padding: 0.3rem;
 }
 
 .paticka a {
-    color: silver;
+    color: var(--paticka-color);
 }
 
 
 /* ------------------------------- */
 /* ----- DOLE BUDE TVOJE CSS ----- */
 /* ------------------------------- */
+
+/*font-family: 'Source Sans Pro', sans-serif;
+font-family: 'Raleway', sans-serif;*/
+
+
+.recepty-celkem {
+    max-width: 1200px;
+}
+
+.hlavni-recept {background-image: url(images/burger.jpg);}
+.recept-2 {background-image: url(images/sushi.jpg);}
+.recept-3 {background-image: url(images/rajcata.jpg);}
+.recept-4 {background-image: url(images/kure.jpg);}
+.recept-5 {background-image: url(images/grilovani.jpg);}
+
+.hlavni-recept {
+    min-height: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    margin-bottom: 0.1rem;
+}
+
+.recept-2, 
+.recept-3,
+.recept-4,
+.recept-5 {
+    min-height: 90px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    margin-bottom: 0.1rem;
+}
+
+p {
+    margin: 0;
+}
+
+.typ-upravy,
+.pocet-komentaru {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--font-color);
+}
+
+.pokrm {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: var(--font-size-mobil);
+    position: absolute;
+    bottom: 0;
+    padding-left: var(--padding-mobil);
+    padding-bottom: var(--padding-mobil);
+    color: var(--font-color);
+}
+
+.pokrm-hlavni {
+    font-size: var(--font-size-hlavni-mobil);
+    padding-right: 1rem;
+}
+
+.typ-upravy {
+    position: absolute;
+    left: 0;
+    padding-left: var(--padding-mobil);
+    padding-top: var(--padding-mobil);
+}
+
+.pocet-komentaru {
+    position: absolute;
+    right: 0;
+    padding-top: var(--padding-mobil);
+    padding-right: var(--padding-mobil);
+}
+
+/* ----- min-width: 480px -------- */
+
+@media screen and (min-width: 480px){
+
+    .ostatni-recepty {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .hlavni-recept {
+        min-height: 250px;
+    }
+
+   .recept {
+       min-height: 150px;
+       flex-basis: 50%;
+   }
+
+   .recept-2 {order: 1;}
+   .recept-3 {order: 3;}
+   .recept-4 {order: 2;}
+   .recept-5 {order: 4;}
+
+   .recept-2,
+   .recept-3 {
+       border-right: 0.1rem solid var(--border-color);
+   }
+
+    .pokrm {
+        font-size: var(--font-size-tablet);
+        padding-left: var(--padding-tablet);
+        padding-bottom: var(--padding-tablet);
+    }
+
+    .pokrm-hlavni {
+        font-size: var(--font-size-hlavni-tablet);
+    }
+
+    .typ-upravy {
+        padding-left: var(--padding-tablet);
+        padding-top: var(--padding-tablet);
+    }
+   
+    .pocet-komentaru {
+        padding-top: var(--padding-tablet);
+        padding-right: var(--padding-tablet);
+    }
+}
+
+/* ----- min-width: 860px -------- */
+
+@media screen and (min-width: 860px){
+
+    .recepty-celkem {
+        display: flex;
+        justify-content: center;
+        margin: 1rem auto;
+    }
+
+    .hlavni-recept {
+        min-height: 400px;
+        min-width: 400px;
+        order: -1;
+        border-right: 0.1rem solid var(--border-color);
+    }
+
+    .recept {
+        min-height: 200px;
+        min-width: 200px;
+    }
+
+    .recept-2 {order: 1;}
+    .recept-3 {order: 3;}
+    .recept-4 {order: 2;}
+    .recept-5 {order: 4;}
+ 
+    .recept-3,
+    .recept-5 {
+        border-right: 0.1rem solid var(--border-color);
+    }
+
+    .pokrm {
+        font-size: var(--font-size-pc);
+    } 
+
+    .pokrm-hlavni {
+        font-size: var(--font-size-hlavni-pc);
+    }
+
+    .paticka {
+        margin-top: -1rem;
+    }
+   
+}
 
