@@ -1,3 +1,3 @@
-# Projekt 5 - Recepty
+# [Tvořím web od A do Z](https://github.com/czechitas/tvorim-web-a-z): 5. projekt – Recepty
 
-###### Podle vašeho přesvědení si můžete vybrat mezi veganskou a masovou variantou...
+[![](navod.jpg)](navod.jpg)

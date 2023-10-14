@@ -1,6 +1,13 @@
 /* nejsme vcerejsi, pouzivame moderni box model */
-html { box-sizing: border-box; }
-*, ::after, ::before { box-sizing: inherit; }
+html {
+    box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+    box-sizing: inherit;
+}
 
 
 /* -------------------------------------------------- */
@@ -70,11 +77,35 @@ font-family: 'Raleway', sans-serif;*/
     max-width: 1200px;
 }
 
-.hlavni-recept {background-image: url(images/burger.jpg);}
-.recept-2 {background-image: url(images/sushi.jpg);}
-.recept-3 {background-image: url(images/rajcata.jpg);}
-.recept-4 {background-image: url(images/kure.jpg);}
-.recept-5 {background-image: url(images/grilovani.jpg);}
+.hlavni-recept {
+    background-image:
+        linear-gradient(hsla(0 0% 0% / 0.2), hsla(0 0% 0% / 0.2)),
+        url(images/burger.jpg);
+}
+
+.recept-2 {
+    background-image:
+        linear-gradient(hsla(0 0% 0% / 0.2), hsla(0 0% 0% / 0.2)),
+        url(images/sushi.jpg);
+}
+
+.recept-3 {
+    background-image:
+        linear-gradient(hsla(0 0% 0% / 0.2), hsla(0 0% 0% / 0.2)),
+        url(images/rajcata.jpg);
+}
+
+.recept-4 {
+    background-image:
+        linear-gradient(hsla(0 0% 0% / 0.2), hsla(0 0% 0% / 0.2)),
+        url(images/kure.jpg);
+}
+
+.recept-5 {
+    background-image:
+        linear-gradient(hsla(0 0% 0% / 0.2), hsla(0 0% 0% / 0.2)),
+        url(images/grilovani.jpg);
+}
 
 .hlavni-recept {
     min-height: 200px;
@@ -85,10 +116,7 @@ font-family: 'Raleway', sans-serif;*/
     margin-bottom: 0.1rem;
 }
 
-.recept-2, 
-.recept-3,
-.recept-4,
-.recept-5 {
+.recept {
     min-height: 90px;
     background-repeat: no-repeat;
     background-position: center;
@@ -111,6 +139,7 @@ p {
     font-family: 'Raleway', sans-serif;
     font-weight: 800;
     font-size: var(--font-size-mobil);
+    text-shadow: 0 0 3px hsla(0 0% 0% / 0.9);
     position: absolute;
     bottom: 0;
     padding-left: var(--padding-mobil);
@@ -139,7 +168,7 @@ p {
 
 /* ----- min-width: 480px -------- */
 
-@media screen and (min-width: 480px){
+@media screen and (min-width: 480px) {
 
     .ostatni-recepty {
         display: flex;
@@ -150,20 +179,31 @@ p {
         min-height: 250px;
     }
 
-   .recept {
-       min-height: 150px;
-       flex-basis: 50%;
-   }
+    .recept {
+        min-height: 150px;
+        flex-basis: 50%;
+    }
 
-   .recept-2 {order: 1;}
-   .recept-3 {order: 3;}
-   .recept-4 {order: 2;}
-   .recept-5 {order: 4;}
+    .recept-2 {
+        order: 1;
+    }
 
-   .recept-2,
-   .recept-3 {
-       border-right: 0.1rem solid var(--border-color);
-   }
+    .recept-3 {
+        order: 3;
+    }
+
+    .recept-4 {
+        order: 2;
+    }
+
+    .recept-5 {
+        order: 4;
+    }
+
+    .recept-2,
+    .recept-3 {
+        border-right: 0.1rem solid var(--border-color);
+    }
 
     .pokrm {
         font-size: var(--font-size-tablet);
@@ -179,7 +219,7 @@ p {
         padding-left: var(--padding-tablet);
         padding-top: var(--padding-tablet);
     }
-   
+
     .pocet-komentaru {
         padding-top: var(--padding-tablet);
         padding-right: var(--padding-tablet);
@@ -188,7 +228,7 @@ p {
 
 /* ----- min-width: 860px -------- */
 
-@media screen and (min-width: 860px){
+@media screen and (min-width: 860px) {
 
     .recepty-celkem {
         display: flex;
@@ -208,11 +248,22 @@ p {
         min-width: 200px;
     }
 
-    .recept-2 {order: 1;}
-    .recept-3 {order: 3;}
-    .recept-4 {order: 2;}
-    .recept-5 {order: 4;}
- 
+    .recept-2 {
+        order: 1;
+    }
+
+    .recept-3 {
+        order: 3;
+    }
+
+    .recept-4 {
+        order: 2;
+    }
+
+    .recept-5 {
+        order: 4;
+    }
+
     .recept-3,
     .recept-5 {
         border-right: 0.1rem solid var(--border-color);
@@ -220,7 +271,7 @@ p {
 
     .pokrm {
         font-size: var(--font-size-pc);
-    } 
+    }
 
     .pokrm-hlavni {
         font-size: var(--font-size-hlavni-pc);
@@ -229,6 +280,5 @@ p {
     .paticka {
         margin-top: -1rem;
     }
-   
-}
 
+}
